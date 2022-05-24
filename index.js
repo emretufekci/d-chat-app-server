@@ -7,5 +7,6 @@ const Gun = require("gun")
 
 const server = require('http').createServer().listen(8765);
   new Gun({
+    peers: ['http://localhost:8765/gun'],
     web: server,
   });
